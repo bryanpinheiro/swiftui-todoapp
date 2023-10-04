@@ -11,6 +11,9 @@
 		936269452ACCEFA5006DA74F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936269442ACCEFA5006DA74F /* ContentView.swift */; };
 		936269472ACCEFA7006DA74F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 936269462ACCEFA7006DA74F /* Assets.xcassets */; };
 		9362694A2ACCEFA7006DA74F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 936269492ACCEFA7006DA74F /* Preview Assets.xcassets */; };
+		93675C2D2ACDEF19002727C6 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 93675C2C2ACDEF19002727C6 /* SQLite */; };
+		93675C312ACDF053002727C6 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93675C302ACDF053002727C6 /* Task.swift */; };
+		93675C332ACDF0AA002727C6 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93675C322ACDF0AA002727C6 /* TodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		936269442ACCEFA5006DA74F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		936269462ACCEFA7006DA74F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		936269492ACCEFA7006DA74F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		93675C302ACDF053002727C6 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		93675C322ACDF0AA002727C6 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93675C2D2ACDEF19002727C6 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +57,8 @@
 		936269412ACCEFA5006DA74F /* swiftui-todoapp */ = {
 			isa = PBXGroup;
 			children = (
+				93675C2F2ACDF013002727C6 /* Screens */,
+				93675C2E2ACDF006002727C6 /* Database */,
 				936269422ACCEFA5006DA74F /* swiftui_todoappApp.swift */,
 				936269442ACCEFA5006DA74F /* ContentView.swift */,
 				936269462ACCEFA7006DA74F /* Assets.xcassets */,
@@ -65,6 +73,22 @@
 				936269492ACCEFA7006DA74F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		93675C2E2ACDF006002727C6 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				93675C302ACDF053002727C6 /* Task.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		93675C2F2ACDF013002727C6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				93675C322ACDF0AA002727C6 /* TodoView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +107,9 @@
 			dependencies = (
 			);
 			name = "swiftui-todoapp";
+			packageProductDependencies = (
+				93675C2C2ACDEF19002727C6 /* SQLite */,
+			);
 			productName = "swiftui-todoapp";
 			productReference = 9362693F2ACCEFA5006DA74F /* swiftui-todoapp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +138,9 @@
 				Base,
 			);
 			mainGroup = 936269362ACCEFA5006DA74F;
+			packageReferences = (
+				93675C2B2ACDEF19002727C6 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 936269402ACCEFA5006DA74F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +168,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				936269452ACCEFA5006DA74F /* ContentView.swift in Sources */,
+				93675C312ACDF053002727C6 /* Task.swift in Sources */,
+				93675C332ACDF0AA002727C6 /* TodoView.swift in Sources */,
 				936269432ACCEFA5006DA74F /* swiftui_todoappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +302,7 @@
 				DEVELOPMENT_TEAM = Q8FP8X2SNJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -282,9 +315,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "bryanpinheiro.swiftui-todoapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,6 +335,7 @@
 				DEVELOPMENT_TEAM = Q8FP8X2SNJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,9 +348,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "bryanpinheiro.swiftui-todoapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93675C2B2ACDEF19002727C6 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93675C2C2ACDEF19002727C6 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93675C2B2ACDEF19002727C6 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 936269372ACCEFA5006DA74F /* Project object */;
 }
